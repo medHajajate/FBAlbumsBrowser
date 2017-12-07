@@ -29,11 +29,46 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="Sdb-ON-2JL" id="hSE-MR-Bkt"/>
+                        <segue destination="du7-9R-G4h" kind="show" identifier="showAlbums" id="8Xp-DU-OS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.59999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-41" y="642"/>
+        </scene>
+        <!--Albums View Controller-->
+        <scene sceneID="JoA-rI-Jn9">
+            <objects>
+                <viewController id="jSt-XG-LRT" customClass="AlbumsViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ysn-zh-qKg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="8c5-gx-hpR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5nd-c7-oUj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2y-Su-dNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4cY-me-Pf0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="du7-9R-G4h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MXG-6f-e01">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jSt-XG-LRT" kind="relationship" relationship="rootViewController" id="3zd-Xc-RKw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlN-Id-Aux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516.8" y="133.13343328335833"/>
         </scene>
     </scenes>
 </document>
