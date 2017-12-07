@@ -12,6 +12,7 @@
 		17660F451FD58948008B3DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17660F431FD58948008B3DE7 /* Main.storyboard */; };
 		17660F471FD58948008B3DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17660F461FD58948008B3DE7 /* Assets.xcassets */; };
 		17660F4A1FD58948008B3DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17660F481FD58948008B3DE7 /* LaunchScreen.storyboard */; };
+		A641C9A37FC873D53416CBF9 /* Pods_FbAlbumApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB54BEC8A220E0DF30747F4 /* Pods_FbAlbumApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		17660F461FD58948008B3DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17660F491FD58948008B3DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17660F4B1FD58948008B3DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72188FDC6789A631D32F1166 /* Pods-FbAlbumApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbAlbumApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FbAlbumApp/Pods-FbAlbumApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A2EA6DF174833E24A1C159F1 /* Pods-FbAlbumApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FbAlbumApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FbAlbumApp/Pods-FbAlbumApp.release.xcconfig"; sourceTree = "<group>"; };
+		FBB54BEC8A220E0DF30747F4 /* Pods_FbAlbumApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FbAlbumApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A641C9A37FC873D53416CBF9 /* Pods_FbAlbumApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				17660F3E1FD58948008B3DE7 /* FbAlbumApp */,
 				17660F3D1FD58948008B3DE7 /* Products */,
+				80085DF851B5B7426E117A89 /* Pods */,
+				5181E891F45C2910FDF25622 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = FbAlbumApp;
 			sourceTree = "<group>";
 		};
+		5181E891F45C2910FDF25622 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBB54BEC8A220E0DF30747F4 /* Pods_FbAlbumApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80085DF851B5B7426E117A89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72188FDC6789A631D32F1166 /* Pods-FbAlbumApp.debug.xcconfig */,
+				A2EA6DF174833E24A1C159F1 /* Pods-FbAlbumApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17660F4E1FD58948008B3DE7 /* Build configuration list for PBXNativeTarget "FbAlbumApp" */;
 			buildPhases = (
+				362767F508F604C005C81671 /* [CP] Check Pods Manifest.lock */,
 				17660F381FD58948008B3DE7 /* Sources */,
 				17660F391FD58948008B3DE7 /* Frameworks */,
 				17660F3A1FD58948008B3DE7 /* Resources */,
+				9E830C44C9442B9C81FB4082 /* [CP] Embed Pods Frameworks */,
+				A1B515985D10913050C37FF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		362767F508F604C005C81671 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FbAlbumApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E830C44C9442B9C81FB4082 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FbAlbumApp/Pods-FbAlbumApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FbAlbumApp/Pods-FbAlbumApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B515985D10913050C37FF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FbAlbumApp/Pods-FbAlbumApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17660F381FD58948008B3DE7 /* Sources */ = {
@@ -272,6 +357,7 @@
 		};
 		17660F4F1FD58948008B3DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72188FDC6789A631D32F1166 /* Pods-FbAlbumApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +372,7 @@
 		};
 		17660F501FD58948008B3DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2EA6DF174833E24A1C159F1 /* Pods-FbAlbumApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

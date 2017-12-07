@@ -1,0 +1,6 @@
+framework module Pods_FbAlbumApp {
+  umbrella header "Pods-FbAlbumApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
