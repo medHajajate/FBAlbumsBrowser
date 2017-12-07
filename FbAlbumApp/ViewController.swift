@@ -21,6 +21,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.delegate = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if FBSDKAccessToken.current() != nil {
+            performSegue(withIdentifier: "showAlbums", sender: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,6 +35,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if error == nil {
                 Log.msg(message: "Log In")
+                performSegue(withIdentifier: "showAlbums", sender: nil)
         } else {
             if let error = error?.localizedDescription {
                 print("Error: \(error)")
