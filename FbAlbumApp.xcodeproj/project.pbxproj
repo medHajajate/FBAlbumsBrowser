@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1743D7C51FD9B90100CEFC64 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C41FD9B90100CEFC64 /* Log.swift */; };
 		17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660F3F1FD58948008B3DE7 /* AppDelegate.swift */; };
 		17660F421FD58948008B3DE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660F411FD58948008B3DE7 /* ViewController.swift */; };
 		17660F451FD58948008B3DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17660F431FD58948008B3DE7 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1743D7C41FD9B90100CEFC64 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		17660F3C1FD58948008B3DE7 /* FbAlbumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FbAlbumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17660F3F1FD58948008B3DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17660F411FD58948008B3DE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1743D7C31FD9B8BA00CEFC64 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1743D7C41FD9B90100CEFC64 /* Log.swift */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
 		17660F331FD58948008B3DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 				17660F3F1FD58948008B3DE7 /* AppDelegate.swift */,
 				17660F411FD58948008B3DE7 /* ViewController.swift */,
 				17660F431FD58948008B3DE7 /* Main.storyboard */,
+				1743D7C31FD9B8BA00CEFC64 /* utilities */,
 				17660F461FD58948008B3DE7 /* Assets.xcassets */,
 				17660F481FD58948008B3DE7 /* LaunchScreen.storyboard */,
 				17660F4B1FD58948008B3DE7 /* Info.plist */,
@@ -223,6 +234,7 @@
 			files = (
 				17660F421FD58948008B3DE7 /* ViewController.swift in Sources */,
 				17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */,
+				1743D7C51FD9B90100CEFC64 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
