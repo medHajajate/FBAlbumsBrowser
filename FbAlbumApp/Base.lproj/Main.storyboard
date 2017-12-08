@@ -55,18 +55,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PrP-Hh-O9j">
-                                                    <rect key="frame" x="102" y="16" width="269" height="74"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PrP-Hh-O9j">
+                                                    <rect key="frame" x="102" y="16" width="265" height="74"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67o-a1-N4V">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="67o-a1-N4V" customClass="RemoteImageView" customModule="FbAlbumApp" customModuleProvider="target">
                                                     <rect key="frame" x="4" y="8" width="90" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="C9D-C0-lvd"/>
+                                                        <constraint firstAttribute="height" constant="90" id="pVH-pS-wC4"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="PrP-Hh-O9j" secondAttribute="bottom" constant="17.5" id="1Wf-YJ-lTI"/>
+                                                <constraint firstAttribute="trailing" secondItem="PrP-Hh-O9j" secondAttribute="trailing" constant="8" id="1ns-8D-Oea"/>
+                                                <constraint firstItem="PrP-Hh-O9j" firstAttribute="top" secondItem="adr-uU-RT3" secondAttribute="top" constant="16" id="F7c-UG-HBB"/>
+                                                <constraint firstItem="67o-a1-N4V" firstAttribute="leading" secondItem="adr-uU-RT3" secondAttribute="leading" constant="4" id="Zam-OL-CnV"/>
+                                                <constraint firstAttribute="bottom" secondItem="67o-a1-N4V" secondAttribute="bottom" constant="9.5" id="e5T-FF-Edw"/>
+                                                <constraint firstItem="67o-a1-N4V" firstAttribute="top" secondItem="adr-uU-RT3" secondAttribute="top" constant="8" id="vcM-MG-60X"/>
+                                                <constraint firstItem="PrP-Hh-O9j" firstAttribute="leading" secondItem="67o-a1-N4V" secondAttribute="trailing" constant="8" id="z2f-HV-FSN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageAlbum" destination="67o-a1-N4V" id="wFs-no-z8W"/>

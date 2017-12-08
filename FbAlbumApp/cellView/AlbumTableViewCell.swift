@@ -11,7 +11,7 @@ import UIKit
 class AlbumTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleAlbum: UILabel!
-    @IBOutlet weak var imageAlbum: UIImageView!
+    @IBOutlet weak var imageAlbum: RemoteImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +23,13 @@ class AlbumTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    var albumItem: Album? {
+        didSet {
+                titleAlbum.text = albumItem?.name
+                imageAlbum.imageURL = albumItem?.coverPhotoURL
+        }
+    }
 
 }
+
