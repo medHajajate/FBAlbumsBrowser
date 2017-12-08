@@ -9,5 +9,7 @@ target 'FbAlbumApp' do
 
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'Siesta'
+  pod 'Siesta/UI'
 
 end
