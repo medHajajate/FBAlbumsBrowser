@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumTableViewCell: UITableViewCell {
+class AlbumCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var titleAlbum: UILabel!
     @IBOutlet weak var imageAlbum: RemoteImageView!
@@ -16,12 +16,6 @@ class AlbumTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     var albumItem: Album? {

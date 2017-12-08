@@ -11,7 +11,7 @@
 		173769C51FDAD2E600D2B74F /* FbHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173769C41FDAD2E600D2B74F /* FbHandler.swift */; };
 		1743D7C51FD9B90100CEFC64 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C41FD9B90100CEFC64 /* Log.swift */; };
 		1743D7C71FD9BAEA00CEFC64 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */; };
-		1743D7C91FDAA21900CEFC64 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C81FDAA21900CEFC64 /* AlbumTableViewCell.swift */; };
+		1743D7C91FDAA21900CEFC64 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C81FDAA21900CEFC64 /* AlbumCollectionViewCell.swift */; };
 		1743D7CD1FDAB0F600CEFC64 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7CC1FDAB0F600CEFC64 /* RemoteImageView.swift */; };
 		17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660F3F1FD58948008B3DE7 /* AppDelegate.swift */; };
 		17660F421FD58948008B3DE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660F411FD58948008B3DE7 /* ViewController.swift */; };
@@ -26,7 +26,7 @@
 		173769C41FDAD2E600D2B74F /* FbHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbHandler.swift; sourceTree = "<group>"; };
 		1743D7C41FD9B90100CEFC64 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
-		1743D7C81FDAA21900CEFC64 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		1743D7C81FDAA21900CEFC64 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		1743D7CC1FDAB0F600CEFC64 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		17660F3C1FD58948008B3DE7 /* FbAlbumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FbAlbumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17660F3F1FD58948008B3DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		1743D7CA1FDAA22100CEFC64 /* cellView */ = {
 			isa = PBXGroup;
 			children = (
-				1743D7C81FDAA21900CEFC64 /* AlbumTableViewCell.swift */,
+				1743D7C81FDAA21900CEFC64 /* AlbumCollectionViewCell.swift */,
 			);
 			path = cellView;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				173769C51FDAD2E600D2B74F /* FbHandler.swift in Sources */,
-				1743D7C91FDAA21900CEFC64 /* AlbumTableViewCell.swift in Sources */,
+				1743D7C91FDAA21900CEFC64 /* AlbumCollectionViewCell.swift in Sources */,
 				1743D7C71FD9BAEA00CEFC64 /* AlbumsViewController.swift in Sources */,
 				17660F421FD58948008B3DE7 /* ViewController.swift in Sources */,
 				17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */,

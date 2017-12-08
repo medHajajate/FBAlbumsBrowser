@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-ON-2JL" customClass="FBSDKLoginButton">
@@ -41,73 +41,76 @@
             <objects>
                 <viewController id="jSt-XG-LRT" customClass="AlbumsViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ysn-zh-qKg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fpt-qB-Emf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VVv-fj-ZzT">
+                                <rect key="frame" x="10" y="74" width="300" height="406"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" rowHeight="108" id="dRY-bF-vKP" customClass="AlbumTableViewCell" customModule="FbAlbumApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="108"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dRY-bF-vKP" id="adr-uU-RT3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="15" id="A4C-aG-lKf">
+                                    <size key="itemSize" width="133" height="131"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="pTO-1T-TeR" customClass="AlbumCollectionViewCell" customModule="FbAlbumApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PrP-Hh-O9j">
-                                                    <rect key="frame" x="102" y="16" width="265" height="74"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kyP-VJ-bvn" customClass="RemoteImageView" customModule="FbAlbumApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiL-56-t0A">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="67o-a1-N4V" customClass="RemoteImageView" customModule="FbAlbumApp" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="8" width="90" height="90"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="C9D-C0-lvd"/>
-                                                        <constraint firstAttribute="height" constant="90" id="pVH-pS-wC4"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="PrP-Hh-O9j" secondAttribute="bottom" constant="17.5" id="1Wf-YJ-lTI"/>
-                                                <constraint firstAttribute="trailing" secondItem="PrP-Hh-O9j" secondAttribute="trailing" constant="8" id="1ns-8D-Oea"/>
-                                                <constraint firstItem="PrP-Hh-O9j" firstAttribute="top" secondItem="adr-uU-RT3" secondAttribute="top" constant="16" id="F7c-UG-HBB"/>
-                                                <constraint firstItem="67o-a1-N4V" firstAttribute="leading" secondItem="adr-uU-RT3" secondAttribute="leading" constant="4" id="Zam-OL-CnV"/>
-                                                <constraint firstAttribute="bottom" secondItem="67o-a1-N4V" secondAttribute="bottom" constant="9.5" id="e5T-FF-Edw"/>
-                                                <constraint firstItem="67o-a1-N4V" firstAttribute="top" secondItem="adr-uU-RT3" secondAttribute="top" constant="8" id="vcM-MG-60X"/>
-                                                <constraint firstItem="PrP-Hh-O9j" firstAttribute="leading" secondItem="67o-a1-N4V" secondAttribute="trailing" constant="8" id="z2f-HV-FSN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="oiL-56-t0A" firstAttribute="leading" secondItem="pTO-1T-TeR" secondAttribute="leading" id="0KE-u4-ZCz"/>
+                                            <constraint firstAttribute="trailing" secondItem="kyP-VJ-bvn" secondAttribute="trailing" id="6FB-yZ-xLh"/>
+                                            <constraint firstItem="oiL-56-t0A" firstAttribute="top" secondItem="pTO-1T-TeR" secondAttribute="top" id="Pxh-ZF-Pd4"/>
+                                            <constraint firstItem="kyP-VJ-bvn" firstAttribute="top" secondItem="pTO-1T-TeR" secondAttribute="top" id="adg-mx-svV"/>
+                                            <constraint firstAttribute="bottom" secondItem="kyP-VJ-bvn" secondAttribute="bottom" id="lar-rD-g5h"/>
+                                            <constraint firstAttribute="trailing" secondItem="oiL-56-t0A" secondAttribute="trailing" id="qPE-yX-OWf"/>
+                                            <constraint firstItem="kyP-VJ-bvn" firstAttribute="leading" secondItem="pTO-1T-TeR" secondAttribute="leading" id="yeB-Pm-r7C"/>
+                                        </constraints>
+                                        <size key="customSize" width="120" height="120"/>
                                         <connections>
-                                            <outlet property="imageAlbum" destination="67o-a1-N4V" id="wFs-no-z8W"/>
-                                            <outlet property="titleAlbum" destination="PrP-Hh-O9j" id="VgT-oW-Ty2"/>
+                                            <outlet property="imageAlbum" destination="kyP-VJ-bvn" id="jcu-Pi-N1e"/>
+                                            <outlet property="titleAlbum" destination="oiL-56-t0A" id="DbJ-yM-wCp"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="jSt-XG-LRT" id="gTs-Ep-hj4"/>
-                                    <outlet property="delegate" destination="jSt-XG-LRT" id="Z7h-PR-dUG"/>
+                                    <outlet property="dataSource" destination="jSt-XG-LRT" id="KFG-4q-6aj"/>
+                                    <outlet property="delegate" destination="jSt-XG-LRT" id="LYm-HX-202"/>
                                 </connections>
-                            </tableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fpt-qB-Emf" firstAttribute="leading" secondItem="8c5-gx-hpR" secondAttribute="leading" id="FMw-au-7Xr"/>
-                            <constraint firstItem="fpt-qB-Emf" firstAttribute="top" secondItem="8c5-gx-hpR" secondAttribute="top" id="LY3-Un-2V7"/>
-                            <constraint firstItem="8c5-gx-hpR" firstAttribute="trailing" secondItem="fpt-qB-Emf" secondAttribute="trailing" id="OdN-BV-Xxg"/>
-                            <constraint firstItem="8c5-gx-hpR" firstAttribute="bottom" secondItem="fpt-qB-Emf" secondAttribute="bottom" id="i3m-RI-WBZ"/>
+                            <constraint firstItem="VVv-fj-ZzT" firstAttribute="top" secondItem="8c5-gx-hpR" secondAttribute="top" constant="10" id="6UX-26-u4f"/>
+                            <constraint firstItem="VVv-fj-ZzT" firstAttribute="leading" secondItem="8c5-gx-hpR" secondAttribute="leading" constant="10" id="QTF-5z-cuB"/>
+                            <constraint firstItem="8c5-gx-hpR" firstAttribute="bottom" secondItem="VVv-fj-ZzT" secondAttribute="bottom" id="S6X-S7-scT"/>
+                            <constraint firstItem="8c5-gx-hpR" firstAttribute="trailing" secondItem="VVv-fj-ZzT" secondAttribute="trailing" constant="10" id="hi0-qM-02I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8c5-gx-hpR"/>
                     </view>
                     <navigationItem key="navigationItem" id="5nd-c7-oUj"/>
                     <connections>
-                        <outlet property="tableView" destination="fpt-qB-Emf" id="Uxh-94-o2E"/>
+                        <outlet property="collectionView" destination="VVv-fj-ZzT" id="mFl-4V-k9r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2y-Su-dNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2293.5999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="2293.125" y="132.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4cY-me-Pf0">
@@ -115,7 +118,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="du7-9R-G4h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MXG-6f-e01">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -13,7 +13,7 @@ import FBSDKLoginKit
 
 class AlbumsViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,21 +32,24 @@ class AlbumsViewController: UIViewController {
 
 }
 
-extension AlbumsViewController: UITableViewDelegate, UITableViewDataSource {
+extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return FbHandler.albums.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as! AlbumTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCell", for: indexPath) as! AlbumCollectionViewCell
         cell.albumItem = FbHandler.albums[indexPath.row]
         return cell
     }
     
+    
+    
     @objc func updateTable() {
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
     }
     }
 }
