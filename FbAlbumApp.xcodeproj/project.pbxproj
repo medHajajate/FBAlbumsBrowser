@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173769C31FDAB41D00D2B74F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173769C21FDAB41D00D2B74F /* Album.swift */; };
+		173769C51FDAD2E600D2B74F /* FbHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173769C41FDAD2E600D2B74F /* FbHandler.swift */; };
 		1743D7C51FD9B90100CEFC64 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C41FD9B90100CEFC64 /* Log.swift */; };
 		1743D7C71FD9BAEA00CEFC64 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */; };
 		1743D7C91FDAA21900CEFC64 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C81FDAA21900CEFC64 /* AlbumTableViewCell.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173769C21FDAB41D00D2B74F /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		173769C41FDAD2E600D2B74F /* FbHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbHandler.swift; sourceTree = "<group>"; };
 		1743D7C41FD9B90100CEFC64 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		1743D7C81FDAA21900CEFC64 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
@@ -48,10 +52,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		173769BF1FDAB38400D2B74F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				173769C21FDAB41D00D2B74F /* Album.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		1743D7C31FD9B8BA00CEFC64 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
 				1743D7C41FD9B90100CEFC64 /* Log.swift */,
+				173769C41FDAD2E600D2B74F /* FbHandler.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 				17660F411FD58948008B3DE7 /* ViewController.swift */,
 				1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */,
 				17660F431FD58948008B3DE7 /* Main.storyboard */,
+				173769BF1FDAB38400D2B74F /* models */,
 				1743D7CB1FDAB0BC00CEFC64 /* views */,
 				1743D7CA1FDAA22100CEFC64 /* cellView */,
 				1743D7C31FD9B8BA00CEFC64 /* utilities */,
@@ -259,11 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173769C51FDAD2E600D2B74F /* FbHandler.swift in Sources */,
 				1743D7C91FDAA21900CEFC64 /* AlbumTableViewCell.swift in Sources */,
 				1743D7C71FD9BAEA00CEFC64 /* AlbumsViewController.swift in Sources */,
 				17660F421FD58948008B3DE7 /* ViewController.swift in Sources */,
 				17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */,
 				1743D7CD1FDAB0F600CEFC64 /* RemoteImageView.swift in Sources */,
+				173769C31FDAB41D00D2B74F /* Album.swift in Sources */,
 				1743D7C51FD9B90100CEFC64 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
