@@ -12,6 +12,7 @@
 		173769C71FDAF08B00D2B74F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173769C61FDAF08B00D2B74F /* PhotosViewController.swift */; };
 		173769C91FDAF41D00D2B74F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173769C81FDAF41D00D2B74F /* Photo.swift */; };
 		173769CB1FDAF66400D2B74F /* FbPhotoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173769CA1FDAF66400D2B74F /* FbPhotoHandler.swift */; };
+		173769CD1FDAFCD000D2B74F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173769CC1FDAFCD000D2B74F /* PhotoCollectionViewCell.swift */; };
 		1743D7C51FD9B90100CEFC64 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C41FD9B90100CEFC64 /* Log.swift */; };
 		1743D7C71FD9BAEA00CEFC64 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */; };
 		1743D7C91FDAA21900CEFC64 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C81FDAA21900CEFC64 /* AlbumCollectionViewCell.swift */; };
@@ -30,6 +31,7 @@
 		173769C61FDAF08B00D2B74F /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		173769C81FDAF41D00D2B74F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		173769CA1FDAF66400D2B74F /* FbPhotoHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FbPhotoHandler.swift; sourceTree = "<group>"; };
+		173769CC1FDAFCD000D2B74F /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		1743D7C41FD9B90100CEFC64 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		1743D7C81FDAA21900CEFC64 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				1743D7C81FDAA21900CEFC64 /* AlbumCollectionViewCell.swift */,
+				173769CC1FDAFCD000D2B74F /* PhotoCollectionViewCell.swift */,
 			);
 			path = cellView;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				173769C51FDAD2E600D2B74F /* FbAlbumHandler.swift in Sources */,
 				1743D7C91FDAA21900CEFC64 /* AlbumCollectionViewCell.swift in Sources */,
 				1743D7C71FD9BAEA00CEFC64 /* AlbumsViewController.swift in Sources */,
+				173769CD1FDAFCD000D2B74F /* PhotoCollectionViewCell.swift in Sources */,
 				173769C91FDAF41D00D2B74F /* Photo.swift in Sources */,
 				17660F421FD58948008B3DE7 /* ViewController.swift in Sources */,
 				17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */,
