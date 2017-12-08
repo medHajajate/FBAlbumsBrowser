@@ -29,6 +29,11 @@ class PhotosViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateCollection), name: Notification.Name("PhotoURLFetched"), object: nil)
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("PhotosFetched"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("PhotoURLFetched"), object: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

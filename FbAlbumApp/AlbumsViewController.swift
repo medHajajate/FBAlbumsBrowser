@@ -31,6 +31,11 @@ class AlbumsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("AlbumsFetched"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("CoverPhotoFetched"), object: nil)
+    }
+    
 
 }
 
