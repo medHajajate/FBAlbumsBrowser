@@ -40,8 +40,7 @@ class _FbHandler {
                             let albumCoverPhotoDictionary = albumAttributes["cover_photo"] as? [String: Any] {
                             if let albumCoverPhotoID = albumCoverPhotoDictionary["id"] {
                                 self.albums.append(Album(id: String(describing: albumID), name: String(describing: albumName), coverPhotoId: String(describing: albumCoverPhotoID)))
-
-                            
+                                  self.fetchCoverPhotoURL(by: String(describing: albumCoverPhotoID))
                             }
                         }
                     }
@@ -56,4 +55,52 @@ class _FbHandler {
     }
     
     
+    func fetchCoverPhotoURL(by id: String, size: PhotoSize = .small) {
+        var imageURL: String?
+        FBSDKGraphRequest(graphPath: id, parameters: ["fields":"images"], httpMethod: "GET").start {
+            (connection, result, error) in
+            if error == nil {
+                if let result = result as? [String: Any],
+                    let resultImages = result["images"] as? [[String: Any]] {
+                    for (imageIndex, imageAttributes) in resultImages.enumerated() {
+                        if imageIndex == 0 {
+                            if let imageSource = imageAttributes["source"] as? String {
+                                imageURL = imageSource
+                            }
+                        } else {
+                            switch size {
+                            case .small:
+                                if let imageWidth = imageAttributes["width"] as? Int,
+                                    let imageSource = imageAttributes["source"] as? String {
+                                    if imageWidth == size.rawValue {
+                                        imageURL = imageSource
+                                    }
+                                }
+                            default:
+                                break
+                            }
+                        }
+                    }
+                }
+            } else {
+                if let error = error?.localizedDescription {
+                    print("Error: \(error)")
+                }
+            }
+            
+            for (albumIndex, albumItem) in self.albums.enumerated() {
+                if albumItem.coverPhotoId == id {
+                    self.albums[albumIndex].coverPhotoURL = imageURL
+                }
+            }
+            
+            self.coversFetched += 1
+            if let coversQuantity = self.coversQuantity,
+                coversQuantity == self.coversFetched {
+                NotificationCenter.default.post(name: Notification.Name("CoverPhotoFetched"), object: nil)
+                self.coversFetched = 0
+            }
+            
+        }
+    }
 }
