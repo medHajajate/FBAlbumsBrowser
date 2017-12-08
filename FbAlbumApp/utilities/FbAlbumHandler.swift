@@ -11,12 +11,11 @@ import Foundation
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-let FbHandler = _FbHandler()
+let FbAlbumHandler = _FbAlbumHandler()
 
-class _FbHandler {
+class _FbAlbumHandler {
     
     var coversQuantity: Int?
-    
     var coversFetched = 0
     
     enum PhotoSize: Int {
@@ -103,4 +102,5 @@ class _FbHandler {
             
         }
     }
+    
 }

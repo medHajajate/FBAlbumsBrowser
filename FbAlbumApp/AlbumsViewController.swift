@@ -21,7 +21,7 @@ class AlbumsViewController: UIViewController {
         super.viewDidLoad()
         self.title = "my Albums"
         // Do any additional setup after loading the view.
-        FbHandler.fetchAlbums()
+        FbAlbumHandler.fetchAlbums()
         NotificationCenter.default.addObserver(self, selector: #selector(updateTable), name: Notification.Name("AlbumsFetched"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateTable), name: Notification.Name("CoverPhotoFetched"), object: nil)
     }
@@ -38,17 +38,17 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return FbHandler.albums.count
+        return FbAlbumHandler.albums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCell", for: indexPath) as! AlbumCollectionViewCell
-        cell.albumItem = FbHandler.albums[indexPath.row]
+        cell.albumItem = FbAlbumHandler.albums[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedALbumID = FbHandler.albums[indexPath.row].id
+        selectedALbumID = FbAlbumHandler.albums[indexPath.row].id
         performSegue(withIdentifier: "ShowPhotos", sender: self)
     }
     
