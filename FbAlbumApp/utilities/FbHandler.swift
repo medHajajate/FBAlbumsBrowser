@@ -96,7 +96,7 @@ class _FbHandler {
             
             self.coversFetched += 1
             if let coversQuantity = self.coversQuantity,
-                coversQuantity == self.coversFetched {
+                coversQuantity == self.coversFetched + 2 {
                 NotificationCenter.default.post(name: Notification.Name("CoverPhotoFetched"), object: nil)
                 self.coversFetched = 0
             }

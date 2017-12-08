@@ -47,6 +47,9 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VVv-fj-ZzT">
                                 <rect key="frame" x="10" y="74" width="300" height="406"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1qf-be-Drv"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="15" id="A4C-aG-lKf">
                                     <size key="itemSize" width="133" height="131"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -64,10 +67,10 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kyP-VJ-bvn" customClass="RemoteImageView" customModule="FbAlbumApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiL-56-t0A">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiL-56-t0A">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -96,10 +99,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VVv-fj-ZzT" firstAttribute="centerX" secondItem="Ysn-zh-qKg" secondAttribute="centerX" id="5pA-vJ-9h9"/>
                             <constraint firstItem="VVv-fj-ZzT" firstAttribute="top" secondItem="8c5-gx-hpR" secondAttribute="top" constant="10" id="6UX-26-u4f"/>
-                            <constraint firstItem="VVv-fj-ZzT" firstAttribute="leading" secondItem="8c5-gx-hpR" secondAttribute="leading" constant="10" id="QTF-5z-cuB"/>
                             <constraint firstItem="8c5-gx-hpR" firstAttribute="bottom" secondItem="VVv-fj-ZzT" secondAttribute="bottom" id="S6X-S7-scT"/>
-                            <constraint firstItem="8c5-gx-hpR" firstAttribute="trailing" secondItem="VVv-fj-ZzT" secondAttribute="trailing" constant="10" id="hi0-qM-02I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8c5-gx-hpR"/>
                     </view>
