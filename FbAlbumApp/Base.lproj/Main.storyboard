@@ -182,10 +182,10 @@
             </objects>
             <point key="canvasLocation" x="3173.5999999999999" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Single Photo View Controller-->
         <scene sceneID="L0G-9u-sj7">
             <objects>
-                <viewController id="hmi-7H-rcp" sceneMemberID="viewController">
+                <viewController id="hmi-7H-rcp" customClass="SinglePhotoViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JVo-wG-O2q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,6 +203,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bo2-H1-e7S"/>
                     </view>
+                    <connections>
+                        <outlet property="singleImage" destination="YIo-xN-pUA" id="Jp3-NZ-y7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sL-hu-NaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

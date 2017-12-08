@@ -12,6 +12,8 @@ class PhotosViewController: UIViewController {
 
     var albumID: String?
     
+    var selectedPhotoUrl: String?
+    
     let FbPhotoHandler = _FbPhotoHandler()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -49,9 +51,25 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedPhotoUrl = FbPhotoHandler.photos[indexPath.row].photoUrl
+        performSegue(withIdentifier: "showSinglePhoto", sender: self)
+    }
+    
    @objc func updateCollection() {
         DispatchQueue.main.async() {
             self.collectionView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSinglePhoto" {
+            let singlePhoto = segue.destination as? SinglePhotoViewController
+            if singlePhoto != nil {
+                if let url = selectedPhotoUrl {
+                    singlePhoto?.imageUrl = url
+                }
+            }
         }
     }
 }
