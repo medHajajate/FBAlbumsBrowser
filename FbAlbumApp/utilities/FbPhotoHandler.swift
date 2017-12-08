@@ -11,7 +11,7 @@ import Foundation
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class FbPhotoHandler {
+class _FbPhotoHandler {
     
     var imagesQuantity: Int?
     var imagesFetched = 0
