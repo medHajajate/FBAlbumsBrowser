@@ -15,6 +15,8 @@ class AlbumsViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var selectedALbumID : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "my Albums"
@@ -45,11 +47,26 @@ extension AlbumsViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedALbumID = FbHandler.albums[indexPath.row].id
+        performSegue(withIdentifier: "ShowPhotos", sender: self)
+    }
     
     
     @objc func updateTable() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
     }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPhotos" {
+            let photosViewController = segue.destination as? PhotosViewController
+            if photosViewController != nil {
+                if let id = selectedALbumID {
+                    photosViewController?.albumID = id
+                }
+            }
+        }
     }
 }
