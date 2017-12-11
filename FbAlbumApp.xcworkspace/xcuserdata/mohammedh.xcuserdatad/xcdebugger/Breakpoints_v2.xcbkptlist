@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FbAlbumApp/AlbumsViewController.swift"
-            timestampString = "534449904.410904"
+            timestampString = "534678160.93142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "updateTable()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FbAlbumApp/SinglePhotoViewController.swift"
-            timestampString = "534449904.411257"
+            timestampString = "534678160.931486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"

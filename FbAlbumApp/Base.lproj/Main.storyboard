@@ -105,10 +105,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8c5-gx-hpR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5nd-c7-oUj"/>
+                    <navigationItem key="navigationItem" id="5nd-c7-oUj">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="DEC-er-9OC">
+                            <connections>
+                                <action selector="logOutButton:" destination="jSt-XG-LRT" id="LEH-uC-UEG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="VVv-fj-ZzT" id="mFl-4V-k9r"/>
                         <segue destination="TcO-Kh-sXP" kind="show" identifier="ShowPhotos" id="ZJ1-jY-WIU"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ShowLogin" id="GRJ-An-jxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2y-Su-dNl" userLabel="First Responder" sceneMemberID="firstResponder"/>

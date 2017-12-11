@@ -13,7 +13,10 @@ import FBSDKLoginKit
 
 class AlbumsViewController: UIViewController {
 
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+     let loginManager = FBSDKLoginManager()
     
     var selectedALbumID : String?
     
@@ -31,9 +34,21 @@ class AlbumsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // User is not logged in
+        if FBSDKAccessToken.current() == nil {
+            performSegue(withIdentifier: "ShowLogin", sender: nil)
+        }
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: Notification.Name("AlbumsFetched"), object: nil)
         NotificationCenter.default.removeObserver(self, name: Notification.Name("CoverPhotoFetched"), object: nil)
+    }
+    
+    @IBAction func logOutButton(_ sender: UIBarButtonItem) {
+        loginManager.logOut()
+        performSegue(withIdentifier: "ShowLogin", sender: nil)
     }
     
 
