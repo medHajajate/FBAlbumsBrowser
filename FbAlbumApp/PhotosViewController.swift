@@ -20,6 +20,7 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Log.msg(message: albumID!)
         if let id = albumID {
             FbPhotoHandler.fetchPhotos(by: id)
@@ -37,6 +38,13 @@ class PhotosViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController!.navigationBar.tintColor = nil
+        self.navigationController!.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController!.navigationBar.shadowImage = nil
+        self.navigationController?.navigationBar.isTranslucent = false
+        
     }
     
 

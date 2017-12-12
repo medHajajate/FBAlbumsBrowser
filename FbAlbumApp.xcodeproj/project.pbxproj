@@ -122,6 +122,8 @@
 				17660F3F1FD58948008B3DE7 /* AppDelegate.swift */,
 				17660F411FD58948008B3DE7 /* LoginViewController.swift */,
 				1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */,
+				173769C61FDAF08B00D2B74F /* PhotosViewController.swift */,
+				173769CE1FDB0BF400D2B74F /* SinglePhotoViewController.swift */,
 				17660F431FD58948008B3DE7 /* Main.storyboard */,
 				173769BF1FDAB38400D2B74F /* models */,
 				1743D7CB1FDAB0BC00CEFC64 /* views */,
@@ -130,8 +132,6 @@
 				17660F461FD58948008B3DE7 /* Assets.xcassets */,
 				17660F481FD58948008B3DE7 /* LaunchScreen.storyboard */,
 				17660F4B1FD58948008B3DE7 /* Info.plist */,
-				173769C61FDAF08B00D2B74F /* PhotosViewController.swift */,
-				173769CE1FDB0BF400D2B74F /* SinglePhotoViewController.swift */,
 			);
 			path = FbAlbumApp;
 			sourceTree = "<group>";

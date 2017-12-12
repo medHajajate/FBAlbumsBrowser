@@ -16,6 +16,12 @@ class SinglePhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController!.navigationBar.tintColor = .white
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.isTranslucent = true
+        
         if let url = imageUrl {
             singleImage.imageURL = url
         }
