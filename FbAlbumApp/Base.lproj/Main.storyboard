@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,21 +10,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-ON-2JL" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="112" y="443" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-ON-2JL" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="60" y="376.5" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Gqw-yI-9wK"/>
+                                    <constraint firstAttribute="height" constant="40" id="Nub-fm-4Cx"/>
+                                </constraints>
                                 <state key="normal" title="Log in"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook albums browser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFO-Ed-mWB">
+                                <rect key="frame" x="20" y="70" width="280" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.064116706833928797" green="0.079737117835587387" blue="0.88225729695431476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook-photo-tips" translatesAutoresizingMaskIntoConstraints="NO" id="Tyq-wP-MlQ">
+                                <rect key="frame" x="80" y="146.5" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="9XT-RJ-Rfy"/>
+                                    <constraint firstAttribute="height" constant="160" id="Qo6-aQ-DVR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sFO-Ed-mWB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="5tG-1F-Kae"/>
+                            <constraint firstItem="Sdb-ON-2JL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HG4-fW-N7p"/>
+                            <constraint firstItem="sFO-Ed-mWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dyc-HA-sG2"/>
+                            <constraint firstItem="Sdb-ON-2JL" firstAttribute="top" secondItem="Tyq-wP-MlQ" secondAttribute="bottom" constant="70" id="hF9-n4-Ltf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sFO-Ed-mWB" secondAttribute="trailing" constant="20" id="nAR-zt-k25"/>
+                            <constraint firstItem="Tyq-wP-MlQ" firstAttribute="top" secondItem="sFO-Ed-mWB" secondAttribute="bottom" constant="50" id="shh-24-0D1"/>
+                            <constraint firstItem="Tyq-wP-MlQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zCj-DT-AIp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -34,18 +59,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="642"/>
+            <point key="canvasLocation" x="-42.399999999999999" y="641.82908545727139"/>
         </scene>
         <!--Albums View Controller-->
         <scene sceneID="JoA-rI-Jn9">
             <objects>
                 <viewController id="jSt-XG-LRT" customClass="AlbumsViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ysn-zh-qKg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VVv-fj-ZzT">
-                                <rect key="frame" x="37.5" y="74" width="300" height="593"/>
+                                <rect key="frame" x="10" y="74" width="300" height="406"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="1qf-be-Drv"/>
@@ -127,11 +152,11 @@
             <objects>
                 <viewController id="TcO-Kh-sXP" customClass="PhotosViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="luH-tK-3Tn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lxv-ha-6ll">
-                                <rect key="frame" x="37.5" y="74" width="300" height="593"/>
+                                <rect key="frame" x="10" y="74" width="300" height="406"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="wbi-gn-v4a"/>
@@ -194,11 +219,11 @@
             <objects>
                 <viewController id="hmi-7H-rcp" customClass="SinglePhotoViewController" customModule="FbAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JVo-wG-O2q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIo-xN-pUA" customClass="RemoteImageView" customModule="FbAlbumApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,7 +249,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="du7-9R-G4h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MXG-6f-e01">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -237,4 +262,7 @@
             <point key="canvasLocation" x="1516.8" y="133.13343328335833"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook-photo-tips" width="300" height="300"/>
+    </resources>
 </document>

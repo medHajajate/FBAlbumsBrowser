@@ -19,7 +19,7 @@
 		1743D7C91FDAA21900CEFC64 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7C81FDAA21900CEFC64 /* AlbumCollectionViewCell.swift */; };
 		1743D7CD1FDAB0F600CEFC64 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1743D7CC1FDAB0F600CEFC64 /* RemoteImageView.swift */; };
 		17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660F3F1FD58948008B3DE7 /* AppDelegate.swift */; };
-		17660F421FD58948008B3DE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660F411FD58948008B3DE7 /* ViewController.swift */; };
+		17660F421FD58948008B3DE7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660F411FD58948008B3DE7 /* LoginViewController.swift */; };
 		17660F451FD58948008B3DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17660F431FD58948008B3DE7 /* Main.storyboard */; };
 		17660F471FD58948008B3DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17660F461FD58948008B3DE7 /* Assets.xcassets */; };
 		17660F4A1FD58948008B3DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17660F481FD58948008B3DE7 /* LaunchScreen.storyboard */; };
@@ -40,7 +40,7 @@
 		1743D7CC1FDAB0F600CEFC64 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		17660F3C1FD58948008B3DE7 /* FbAlbumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FbAlbumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17660F3F1FD58948008B3DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17660F411FD58948008B3DE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17660F411FD58948008B3DE7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17660F441FD58948008B3DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17660F461FD58948008B3DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17660F491FD58948008B3DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				17660F3F1FD58948008B3DE7 /* AppDelegate.swift */,
-				17660F411FD58948008B3DE7 /* ViewController.swift */,
+				17660F411FD58948008B3DE7 /* LoginViewController.swift */,
 				1743D7C61FD9BAEA00CEFC64 /* AlbumsViewController.swift */,
 				17660F431FD58948008B3DE7 /* Main.storyboard */,
 				173769BF1FDAB38400D2B74F /* models */,
@@ -296,7 +296,7 @@
 				173769CD1FDAFCD000D2B74F /* PhotoCollectionViewCell.swift in Sources */,
 				173769C91FDAF41D00D2B74F /* Photo.swift in Sources */,
 				173769CF1FDB0BF400D2B74F /* SinglePhotoViewController.swift in Sources */,
-				17660F421FD58948008B3DE7 /* ViewController.swift in Sources */,
+				17660F421FD58948008B3DE7 /* LoginViewController.swift in Sources */,
 				17660F401FD58948008B3DE7 /* AppDelegate.swift in Sources */,
 				1743D7CD1FDAB0F600CEFC64 /* RemoteImageView.swift in Sources */,
 				173769C31FDAB41D00D2B74F /* Album.swift in Sources */,
